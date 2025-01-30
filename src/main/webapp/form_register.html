@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Poll</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.table1 {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.table1 h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="file"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cancel-button {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    color: #555;
+}
+
+.cancel-button button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e4e4e4;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button button:hover {
+    background-color: #d6d6d6;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .table1 {
+        padding: 20px;
+    }
+
+    .table1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-group button,
+    .cancel-button button {
+        font-size: 0.9rem;
+    }
+}
+    </style>
+<body>
+
+    <div class="table1">
+        <h1>สมัครสมาชิก</h1>
+        <form action="register" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="u_user">Username</label>
+                <input type="text" name="u_user" id="u_user" required>
+            </div>
+            <div class="form-group">
+                <label for="u_pass">Password</label>
+                <input type="password" name="u_pass" id="u_pass" required>
+            </div>
+            <div class="form-group">
+                <label for="u_name">ชื่อ</label>
+                <input type="text" name="u_name" id="u_name" required>
+            </div>
+            <div class="form-group">
+                <label for="u_tel">เบอร์โทร</label>
+                <input type="text" name="u_tel" id="u_tel" required>
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit">ยืนยัน</button>
+                <!-- ปรับให้ลิงก์แยกจากปุ่ม -->
+                <a href="index.html" class="cancel-button">
+                    <button type="button">ยกเลิก</button>
+                </a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
